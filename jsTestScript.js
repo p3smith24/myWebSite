@@ -1,16 +1,29 @@
-var number = 0;
+var number = 10;
 var restart = 0;
 var listCount = 0;
 var myList = [ "Anne", "Bob", "Cathy", "Doug" ];
-function tester()
+function names()
 {
-    // var answer = confirm("JS Test 1");
-    // var answer = prompt("What is your name?");
 
-    // alert(answer);
-    // alert("Welcome to my page " + answer + "!");
 
-    /*
+    if (listCount == 3)
+    {
+
+        alert(myList[listCount]);
+        listCount = 0;
+
+    }
+    else
+    { 
+
+        alert(myList[listCount]);
+        listCount = listCount + 1;
+
+    }
+}
+
+function rocket() {
+
     if (number === 0 && restart == 0) 
     {
 
@@ -33,24 +46,12 @@ function tester()
         number = number - 1;
 
     }
-    */
+}
 
-    if (listCount == 3)
-    {
+function welcome() {
+    
+    var answer = prompt("What is your name?");
 
-        alert(myList[listCount]);
-        listCount = 0;
-
-    }
-    else
-    { 
-
-        alert(myList[listCount]);
-        listCount = listCount + 1;
-
-    }
-
-
-
-
+    alert("Welcome to my page " + answer + "!");
+    
 }
