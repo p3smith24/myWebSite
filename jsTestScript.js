@@ -51,7 +51,14 @@ function rocket() {
 function welcome() {
     
     var answer = prompt("What is your name?");
-
+    
+    var confirm = confirm("Your name is " + answer + ", correct?");
+    
+    if (confirm == true) {
     alert("Welcome to my page " + answer + "!");
+    }
+    
+    else {
+    }
     
 }
