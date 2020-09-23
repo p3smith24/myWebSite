@@ -2,6 +2,23 @@ var number = 10;
 var restart = 0;
 var listCount = 0;
 var myList = [ "Anne", "Bob", "Cathy", "Doug" ];
+var picNumber = 0;
+var pictureSwitcherSlides = ["images/slide1.png", "images/slide2.png", "images/slide3.png", "images/slide4.png", "images/slide5.png"]
+var audioSlide1 = new Audio("sounds/slide1.mp3");
+var audioSlide2 = new Audio("sounds/slide2.mp3");
+var audioSlide3 = new Audio("sounds/slide3.mp3");
+var audioSlide4 = new Audio("sounds/slide4.mp3");
+var audioSlide5 = new Audio("sounds/slide5.mp3");
+
+
+function welcome() {
+    
+    var answer = prompt("What is your name?");
+
+    alert("Welcome to my page " + answer + "!");
+    
+}
+
 function names()
 {
 
@@ -48,17 +65,56 @@ function rocket() {
     }
 }
 
-function welcome() {
-    
-    var answer = prompt("What is your name?");
-    
-    var confirm = confirm("Your name is " + answer + ", correct?");
-    
-    if (confirm == true) {
-    alert("Welcome to my page " + answer + "!");
+
+function pictureSwitcher() {
+
+    if (picNumber == 5) {
+
+        picNumber = 0;
+        document.getElementById("pictureSlideshow").src = pictureSwitcherSlides[picNumber];
+
     }
-    
     else {
+
+        document.getElementById("pictureSlideshow").src = pictureSwitcherSlides[picNumber];
+
     }
-    
+
+
+    switch (picNumber) {
+
+        case 0:
+        audioSlide5.pause();
+        audioSlide5.currentTime = 0;
+        audioSlide1.play();
+        break;
+
+        case 1:
+        audioSlide1.pause();
+        audioSlide1.currentTime = 0;
+        audioSlide2.play();
+        break;
+
+        case 2:
+        audioSlide2.pause();
+        audioSlide2.currentTime = 0;
+        audioSlide3.play();
+        break;
+
+        case 3:
+        audioSlide3.pause();
+        audioSlide3.currentTime = 0;
+        audioSlide4.play();
+        break;
+
+        case 4:
+        audioSlide4.pause();
+        audioSlide4.currentTime = 0;
+        audioSlide5.play();
+        break;
+
+    }
+
+    picNumber = picNumber + 1
+
 }
