@@ -68,15 +68,17 @@ function rocket() {
 
 function pictureSwitcher() {
 
+    element = document.getElementById("pictureSlideshow");
+
     if (picNumber == 5) {
 
         picNumber = 0;
-        document.getElementById("pictureSlideshow").src = pictureSwitcherSlides[picNumber];
+        element.src = pictureSwitcherSlides[picNumber];
 
     }
     else {
 
-        document.getElementById("pictureSlideshow").src = pictureSwitcherSlides[picNumber];
+        element.src = pictureSwitcherSlides[picNumber];
 
     }
 
