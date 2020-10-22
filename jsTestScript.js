@@ -86,33 +86,33 @@ function pictureSwitcher() {
     switch (picNumber) {
 
         case 0:
-        audioSlide5.pause();
-        audioSlide5.currentTime = 0;
-        audioSlide1.play();
+            audioSlide5.pause();
+            audioSlide5.currentTime = 0;
+            audioSlide1.play();
         break;
 
         case 1:
-        audioSlide1.pause();
-        audioSlide1.currentTime = 0;
-        audioSlide2.play();
+            audioSlide1.pause();
+            audioSlide1.currentTime = 0;
+            audioSlide2.play();
         break;
 
         case 2:
-        audioSlide2.pause();
-        audioSlide2.currentTime = 0;
-        audioSlide3.play();
+            audioSlide2.pause();
+            audioSlide2.currentTime = 0;
+            audioSlide3.play();
         break;
 
         case 3:
-        audioSlide3.pause();
-        audioSlide3.currentTime = 0;
-        audioSlide4.play();
+            audioSlide3.pause();
+            audioSlide3.currentTime = 0;
+            audioSlide4.play();
         break;
 
         case 4:
-        audioSlide4.pause();
-        audioSlide4.currentTime = 0;
-        audioSlide5.play();
+            audioSlide4.pause();
+            audioSlide4.currentTime = 0;
+            audioSlide5.play();
         break;
 
     }

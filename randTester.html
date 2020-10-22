@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+    <html>
+
+        <head>
+            
+            <title>The Magic 8-Ball!</title>
+            
+			<script type="text/javascript" src="randTesterScript.js"></script>
+
+            <link rel="stylesheet" href="randTesterStyles.css">
+            
+        </head>
+
+        <body link="red" vlink="orange">
+
+			<center> 
+                <h1><span>The Infamous 8-Ball!</span></h1>
+
+                <br>
+
+                <p><span>Put your question into the text box and shake the ball to use the infinite wisdom of the 8-ball!</span></p>
+
+                <br><br>
+
+                <img src="images/eightBall.png" width="250px">
+
+                <br><br><br>
+
+                <input type="text" id="myText" size="80" placeholder="Your Question...">
+
+                <br><br>
+
+                <input type="button" value="Click to shake the ball!" onClick="eightBall()">
+
+                <br><br>
+
+                <input type="text" id="answer" size="80" placeholder="Your Answer..." value="">
+
+                <br><br><br><br>
+
+                <a href="index.html"><span>Back to the Index.</span></a>
+                
+                <audio id="goodOutcome" src="sounds/goodOutcome.mp3"></audio>
+                <audio id="badOutcome" src="sounds/badOutcome.mp3"></audio>
+				
+			</center>
+
+        </body>
+
+    </html> 
