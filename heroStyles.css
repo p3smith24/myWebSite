@@ -15,7 +15,7 @@ h1 span {
 
 p span {
     background-color: whitesmoke;
-    border-style:solid;
+    border-style: solid;
     padding: 10px;
     border: 2px solid black;
 }
@@ -28,7 +28,7 @@ a span {
 }
 
 body {
-    text-align:center;
+    text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     background-image: url('images/_bkgnd_white_wall_.jpg');
 }
@@ -44,5 +44,5 @@ div {
     border-radius: 7px;
     padding: 10px;
     margin-left: 120px;
-    margin-right: 120px; 
-  }
+    margin-right: 120px;
+}
