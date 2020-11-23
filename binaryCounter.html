@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Binary Counter</title>
+
+    <script type="text/javascript" src="binaryCounter.js"></script>
+
+    <link rel="stylesheet" href="BinaryCounter.css">
+
+</head>
+
+<body link="red" vlink="orange">
+
+    <center>
+        <h1><span>Binary Converter</span></h1>
+
+        <br>
+
+        <button type="button" onclick="add()">Add One</button>
+
+        <button type="button" onclick="subtract()">Subtract One</button>
+
+        <br>
+
+        <button type="button" onclick="startCycle()" id="cycleButton">Start Counter</button>
+        <button type="button" onclick="stopCycle()" id="cycleButton">Stop Counter</button>
+
+        <br><br>
+
+        <input type="text" id="numberDisplay" size="10" readonly="true" value="0">
+
+        <br><br>
+
+        <img src="images/off.png" width=100px id="eights">
+        <img src="images/off.png" width=100px id="fours">
+        <img src="images/off.png" width=100px id="twos">
+        <img src="images/off.png" width=100px id="ones">
+
+        <br><br><br>
+
+        <a href="index.html"><span>Back to the Index.</span></a>
+
+        <audio id="goodOutcome" src="sounds/goodOutcome.mp3"></audio>
+        <audio id="badOutcome" src="sounds/badOutcome.mp3"></audio>
+
+    </center>
+
+</body>
+
+</html>
