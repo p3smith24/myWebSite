@@ -10,9 +10,9 @@
                     var xPos = myDude.style.left;
 
                     xPos = parseInt(xPos);
-                    xPos -= 5;
+                    xPos = xPos - 5;
                     myDude.style.left = xPos;
-                    var timer = setTimeout(beginAnim(), 40)
+                    var timer = setTimeout("beginAnim()", 40);
                 }
             </script>  
 
@@ -41,6 +41,10 @@
         <div style="position:absolute; top:125; left:900">
             <img src="images/curtain.jpg" width="100" height="450">
         </div>
+
+        <br><br><br>
+
+        <a href="index.html"><span>Back to the Index.</span></a>
 
     </body>
 
