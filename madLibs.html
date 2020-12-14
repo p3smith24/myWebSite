@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <title>Mad Libs</title>
+
+    <script type="text/javascript" src="madLibs.js"></script>
+
+    <link rel="stylesheet" href="madLibs.css">
+
+</head>
+
+<body link="red" vlink="orange">
+
+    <center>
+        <h1><span>Mad Libs</span></h1>
+
+        <div id="questionsP" style="visibility:visible; display:initial;">
+
+        <br><br>
+
+        <p><span>Enter a Name: <input type="text" id="inputName" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter the name of an Animal: <input type="text" id="inputAnimal1" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter the name of an Animal: <input type="text" id="inputAnimal2" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter the name of an Animal: <input type="text" id="inputAnimal3" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter the name of a Place <input type="text" id="inputPlace" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter a Noun: <input type="text" id="inputNoun" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter an Adjective: <input type="text" id="inputAdjective1" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter an Adjective: <input type="text" id="inputAdjective2" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter the name of an Object: <input type="text" id="inputObject1" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter the name of an Object: <input type="text" id="inputObject2" size="25" placeholder="Your Answer..."></span></p> <br>
+        <p><span>Enter a Past-tense Verb: <input type="text" id="inputPtverb" size="25" placeholder="Your Answer..."></span></p> <br><br>
+
+        <p><span><input type="button" onclick="getWords()" id="madLib" value="Click to get your Mad Lib!"></span></p> <br><br>
+        <a href="index.html"><span>Back to the Index.</span></a>
+
+        </div>
+
+        <div id="answersP" style="visibility:hidden; display:none;">
+
+        <br><br>
+    
+        <p><span><div id="madLibs">mad libs is here!</div></span></p>
+
+        <br><br>
+
+        <p><span><input type="button" onclick="reset()" id="madLib" value="Click to recreate your story!"></span></p> <br><br>
+        <a href="index.html"><span>Back to the Index.</span></a>
+
+        </div>
+
+        
+
+    </center>
+
+</body>
+
+</html>

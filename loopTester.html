@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script language="JavaScript">
+
+                var favFoods = ["Fries","Burgers","French Toast","Granola Bars","Grapes","Pizza","Apples","Bananas"];
+                var counter = 0;
+
+                function start() {
+                    
+                    document.getElementById("display").value = favFoods[counter];
+
+                    counter++;
+
+                    if (counter < favFoods.length) {
+                        var timer = setTimeout("start()", 1000);
+                    } else {
+                        alert("hi");
+                    }
+
+                    /*
+
+                    var grade = 10;
+
+                    if (grade == 9) {
+                        alert("fresh");
+                    } else if (grade == 10) {
+                        alert("soph")
+                    } else if (grade == 11) {
+                        alert("jr")
+                    } else if (grade == 12) {
+                        alert("sr")
+                    }
+                    */
+                    
+                    while (counter < favFoods.length) {
+                        alert(favFoods[counter]);
+                        counter ++
+                    }
+
+                    for (var i=0; i<favFoods[length];i++) {
+                        aler(favFoods[counter]);
+                    }
+                }
+            </script>
+        </head>
+        <body>
+            <center>
+
+            <h1>Loop Test</h1>
+
+            <input type="button" value="Click me" onClick="start()"/>
+
+            <br/><br/>
+
+            <input id="display" type="text" size="75"/>
+
+        <body>
+    </html>
