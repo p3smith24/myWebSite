@@ -15,17 +15,18 @@
         2. start should also then use getIndex() to find the index related to the selected elements.
         3. getindex needs to be coded with a way of interpreting incoming "d" variables to give back an index in an array
         4. these need to have a way to communicate to produce a piece of text from the dropdown and selected menus
+        5. start needs to call it all and conglomerate getIndex and run code.
         5. The facts for the specific dropdowns then need to be written.
         6. This needs to be thoroughly tested 
-        7.
+        7. make it all pretty up
         8 
 
         */
 
 
-        var group = ["-- No Topic Selected --", "A", "B", "C", "D", "E", "F"];
+        var group = ["-- No Topic Selected --", "First Computer", "First Home Computers", "The Computer Mouse", "The Internet", "Keyboards", "Gaming"];
 
-        var facts = ["-- No Topic Selected --", "The Letter A.", "The Letter B.", "The Letter C.", "The Letter D.", "The Letter E.", "The Letter F.",];
+        var facts = ["-- No Topic Selected --", "The first computer was the ENIAC, or Electronic Numerical Integrator and Computer. It was created in 1946 and was turing complete.", "The first home computers were being manufactured in the 70's. This happened onyl after the Boom in microprocessors being manufactured.", "Douglas Engelbart invented the computer mouse. However, when it became commerically available, his patent had already expired and he never earned the monetary credit for his work.", "The first reminiscene of the internet was ARPANET, a DARPA project that assembled many networks of computers to communicate for the US military.", "The first keyboards starterd with typewriters. The infamous QWERTY layout was originally invented by Sholes and Glidden in 1874. Some other notable layouts are the IBM Model M Layout, DVORAK, and AZERTY.", "Computer was first introduced in 1962 with Spacewar!, invented by Stephen Russel at MIT. This has evolved very far from then, even sparking the interest in 3D rendering in computers, making way for a now almost nessecary part of a computer, a Graphics Processing Unit."];
 
         function loadData()
         {
@@ -75,7 +76,7 @@
 
         <center>
 
-        <h1><span>Presidential Fun Facts</span></h1>
+        <h1><span>Computer Fun Facts</span></h1>
 
         <br>
 
@@ -83,7 +84,7 @@
 
         	<tr>
         		<td>  	<select name="p1" id="prez"></select>	</td>
-        		<td>	<input id="funFact" type="text" size="40"/> </td>
+        		<td>	<textarea id="funFact" cols="80" rows="4"></textarea></textarea> </td>
             </tr>
             
         </table></p>
