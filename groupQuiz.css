@@ -1,0 +1,41 @@
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 span {
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+p span {
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+a span {
+    background-color: whitesmoke;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+
+body {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(#ffee00, #7700ff);
+    height: 100%;
+}
+
+img {
+    border: 2px solid black;
+    border-radius: 7px;
+}

@@ -1,0 +1,124 @@
+<html> 
+<head> 
+
+<link rel="stylesheet" href="groupQuiz.css">
+
+<script language="JavaScript">
+
+var questions = ["Question A", "Question B", "Question C", "Question D", "Question E", "Question F", "Question G", "Question H", "Question I", "Question J"];
+
+var answers = ["Answer A", "Answer B", "Answer C", "Answer D", "Answer E", "Answer F", "Answer G", "Answer H", "Answer I", "Answer J"]; 
+
+var onQuestion = 0;
+
+var onAnswer = 0;
+
+var score = 0;
+
+var start = 0;
+
+// Create code in displayQuestion that will display the contents of the questions array, one 
+// element at a time. After the last element is displayed, the program should display the first
+// element again.
+function displayQuestion()
+{
+    document.getElementById("question").value = questions[onQuestion];
+    document.getElementById("answer").value = "";
+}
+
+// This function will first acquire the user's answer (from the textbox with the ID "answer". Then this function will pass that to the checkAnswer function (note: that there is a parameter.) The checkAnswer will return a true or a false. If that function returns true, then the score variable will increase by 1, and an alert should pop up saying "Correct" or something positive. If the checkAnswer function comes back false, then score doesn't increase but an alert should announce "incorect." or something similar. 
+// updateScore
+// functions : add, sub, reset
+function updateScore()
+{
+    score = score + 1;
+}
+
+// This function takes a parameter which will be the users answer. If what the user has submitted the correct answer, this method should return true. Otherwise it should return false. 
+function checkAnswer()
+{
+    if (onQuestion < 11) {
+
+        document.getElementById("pressbutton").value = "Next Question";
+
+        if (document.getElementById("answer").value.toUpperCase() == answers[onAnswer].toUpperCase()) {
+            score ++;
+        }
+
+        displayQuestion();
+
+        onAnswer = onQuestion;
+
+        onQuestion ++;
+        
+    }
+
+    if (onQuestion == 11) 
+    {
+        end(score);
+    }
+
+}
+
+function end(points)
+{
+    document.getElementById("question").value = "Quiz Complete! You got " + score + " points out of 10!"
+}
+
+function reset() 
+{
+    questions = ["Question A", "Question B", "Question C", "Question D", "Question E", "Question F", "Question G", "Question H", "Question I", "Question J"];
+    answers = ["Answer A", "Answer B", "Answer C", "Answer D", "Answer E", "Answer F", "Answer G", "Answer H", "Answer I", "Answer J"];
+    onQuestion = 0;
+    onAnswer = 0;
+    score = 0;
+    start = 0;
+
+    checkAnswer();
+}
+
+</script>
+
+</head>
+
+<body > 
+
+<center>
+
+<br>
+
+<h1><span>My Quiz</span></h1>
+
+<br>
+<table border = 3>
+
+	<tr>
+		<td>  	<input id="question" type="text" size="70" readonly = true>	</td>
+	</tr>
+
+	<tr height = "12"><td></td>
+	</tr>
+
+	<tr>
+		<td>	<input id="answer" type="text" size="70"> </td>
+    </tr>
+
+</table>
+
+<br/><br/>
+
+<p><span><input type="button" id="pressbutton" value="Start" onclick="checkAnswer()"/></span></p>
+
+<br>
+
+<p><span><input type="button" value="Restart" onclick="reset()"/></span></p>
+
+<br><br>
+
+<a href="index.html"><span>Back to the Index.</span></a>
+
+</center>
+
+</body>
+
+</html>
