@@ -5,9 +5,9 @@
 
 <script language="JavaScript">
 
-var questions = ["Question A", "Question B", "Question C", "Question D", "Question E", "Question F", "Question G", "Question H", "Question I", "Question J"];
+var questions = ["Rock that is purple in color and tends to be spiky and crystal-ly.", "What gas does photosynthesis release?", "What organs does COVID-19 target in the body?", "Something typically flavored and small that people enjoy to chew on.", "True or False: Michael Jackson's Bad was released in 1982.", "The device used by modern game consoles to control aspects of a game.", "Animal with striped tail that digs in garbage.", "A box of these can be used to light up a candle.", "Someone who enjoys playing music.", "Currency that is worth only a mere cent."];
 
-var answers = ["Answer A", "Answer B", "Answer C", "Answer D", "Answer E", "Answer F", "Answer G", "Answer H", "Answer I", "Answer J"]; 
+var answers = ["Amethyst", "Oxygen", "Lungs", "Gum", "False", "Controller", "Raccoon", "Matches", "Musician", "Penny"];
 
 var onQuestion = 0;
 
@@ -62,13 +62,13 @@ function checkAnswer()
 
 function end(points)
 {
-    document.getElementById("question").value = "Quiz Complete! You got " + score + " points out of 10!"
+    document.getElementById("question").value = "Quiz Complete! You got " + score + " point(s) out of 10!"
 }
 
 function reset() 
 {
-    questions = ["Question A", "Question B", "Question C", "Question D", "Question E", "Question F", "Question G", "Question H", "Question I", "Question J"];
-    answers = ["Answer A", "Answer B", "Answer C", "Answer D", "Answer E", "Answer F", "Answer G", "Answer H", "Answer I", "Answer J"];
+    questions = ["Rock that is purple in color and tends to be spiky and crystal-ly.", "What gas does photosynthesis release?", "What organs does COVID-19 target in the body?", "Something typically flavored and small that people enjoy to chew on.", "True or False: Michael Jackson's Bad was released in 1982.", "The device used by modern game consoles to control aspects of a game.", "Animal with striped tail that digs in garbage.", "A box of these can be used to light up a candle.", "Someone who enjoys playing music.", "Currency that is worth only a mere cent."];
+    answers = ["Amethyst", "Oxygen", "Lungs", "Gum", "False", "Controller", "Raccoon", "Matches", "Musician", "Penny"];
     onQuestion = 0;
     onAnswer = 0;
     score = 0;
