@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+    <html>
+
+        <head>
+
+			<script type="text/javascript" src="tripleGameScript.js"></script>
+
+			<link rel="stylesheet" href="tripleGameStyles.css">
+
+        </head>
+
+        <body link="red" vlink="orange">
+
+			<center> 
+				
+                <!--start / gameselect div--> 
+                    <div id="start" style="display: block;">
+                        <h1><span>Start & Settings</span></h1>
+
+                        <br>
+
+                        <a><span><input type="button" onclick="startController()" id="startButton" value="Click to Start"></span><a>
+
+                        <br>
+
+                    </div>
+                
+                <!--game1 / typingGame div--> 
+                    <div id="typingGame" style="display: none;">
+                        <h1><span>Typing Game</span></h1>
+
+                        <br>
+
+                        <a><span>Phrase to type :</span></a> 
+
+                        <br><br><br>
+
+                        <a><span><input type="text" id="textToType" value="" readonly size="50"></span></a>
+                        
+                        <br><br><br>
+                        
+                        <a><span>Type here :</span></a>
+                            
+                        <br><br><br>
+                        
+                        <a><span><input type="text" id="typingArea" onpaste="return false;" ondrop="return false;" autocomplete="off" value="" size="50"></span></a>
+
+
+                    </div>
+
+                <!--game2 / reactionGame div--> 
+                    <div id="reactionGame" style="display: none;">
+                        <h1><span>Reaction Game</span></h1>
+
+                        <br>
+
+                        <input type="text" id="reactionReturn" value="" readonly size="50">
+
+                        <br><br>
+
+                        <input type="button" id="reactionButton" onclick="reactionButtonPress()" style="height:200px;width:200px" value="Click when Green">  
+
+                    </div>
+
+                <!--game3 / boxclicker div--> 
+                    <div id="clickBoxGame" style="display: none;">
+                        <h1><span>Click the Correct Box Game</span></h1>
+
+                        <br>
+
+                        <input type="text" id="response" value="" readonly size="50">
+
+                        <br>
+
+                        <input type="text" id="buttonToClick" value="" readonly size="50">
+
+                        <br><br>
+
+                        <input type="button" id="button0" onClick="pressButton0()" style="height:200px;width:200px" value="Click">     
+                        <input type="button" id="button1" onClick="pressButton1()" style="height:200px;width:200px" value="Click">
+                        <input type="button" id="button2" onClick="pressButton2()" style="height:200px;width:200px" value="Click">
+
+                        <br>
+
+                        <input type="button" id="button3" onClick="pressButton3()" style="height:200px;width:200px" value="Click">
+                        <input type="button" id="button4" onClick="pressButton4()" style="height:200px;width:200px" value="Click">
+                        <input type="button" id="button5" onClick="pressButton5()" style="height:200px;width:200px" value="Click">
+
+                        <br>
+
+                        <input type="button" id="button6" onClick="pressButton6()" style="height:200px;width:200px" value="Click">
+                        <input type="button" id="button7" onClick="pressButton7()" style="height:200px;width:200px" value="Click">
+                        <input type="button" id="button8" onClick="pressButton8()" style="height:200px;width:200px" value="Click">
+
+                    </div>
+
+                <!--end / highscore / reset div--> 
+                    <div id="end" style="display: none;">
+                        <h1><span>End</span></h1>
+
+                        <input type="text" id="endBox" value="" readonly size="50">
+                    </div>
+				
+			</center>
+
+        </body>
+
+    </html> 
