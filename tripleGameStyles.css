@@ -16,3 +16,11 @@ h1 span {
     border: 2px solid black;
     border-radius: 7px;
 }
+
+p span {
+	font-size: 150%;
+	background-color: whitesmoke;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 7px;
+}

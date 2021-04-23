@@ -15,27 +15,20 @@ var stopReactionTime;
 var timeInMilliseconds;
 
 function startController() {
-    var typeRepetitionsStart = 2;
-    var typeMillisecondsPerCharacterStart = 175;
-    var typeWaitBeforeStartStart = 2000;
-    var reactionRepetitionsStart = 2;
-    var reactionWaitBeforeStartStart = 2500;
-    var clickBoxRepetitionsStart = 2;
-    var clickTimeToClickStart = 2500;
-    var clickWaitBeforeStartStart = 1500;
+	
 
 
-    mainController(typeRepetitionsStart, typeMillisecondsPerCharacterStart, typeWaitBeforeStartStart, reactionRepetitionsStart, reactionWaitBeforeStartStart, clickBoxRepetitionsStart, clickTimeToClickStart, clickWaitBeforeStartStart);
+    mainController(typeMPC, typeWBS, reactionWBS, clickBoxTTC, clickBoxWBS, clickBoxIR, clickBoxIWP, clickBoxPBI);
 
 }
-
-async function mainController(typeRepetitions, typeMillisecondsPerCharacter, typeWaitBeforeStart, reactionRepetitions, reactionWaitBeforeStart, clickBoxRepetitions, timeToClick, clickBoxWaitBeforeStart) {
+// clickBox(timeToClick, waitBeforeStart, isRandom, isWordPreset, presetButtonID)
+async function mainController(typeMillisecondsPerCharacter, typeWaitBeforeStart, reactionWaitBeforeStart, clickBoxTimeToClick, clickBoxWaitBeforeStart, clickBoxIsRandom, clickBoxIsWordPreset, clickBoxPresetButtonID) {
 
     document.getElementById("start").style.display = "none";
 
     document.getElementById("typingGame").style.display = "block";
 
-    for (i = 0; i<typeRepetitions; i++) {
+    for (i = 0; i<2; i++) {
 
         await typingGameRun(typeMillisecondsPerCharacter, typeWaitBeforeStart);
 
@@ -45,7 +38,7 @@ async function mainController(typeRepetitions, typeMillisecondsPerCharacter, typ
 
     document.getElementById("reactionGame").style.display = "block";
 
-    for (i = 0; i<reactionRepetitions; i++) {
+    for (i = 0; i<2; i++) {
 
         await reactionGameRun(reactionWaitBeforeStart);
 
@@ -59,7 +52,7 @@ async function mainController(typeRepetitions, typeMillisecondsPerCharacter, typ
 
     for (i = 0; i<2; i++) {
 
-        await clickBox(1500, 1500, false, true, 7);
+        await clickBox(clickBoxTimeToClick, clickBoxWaitBeforeStart, clickBoxIsRandom, clickBoxIsWordPreset, clickBoxPresetButtonID);
 
     }
 
@@ -177,6 +170,7 @@ async function reactionGameRun(waitBeforeStart) {
                     }
 
                     setTimeout(function () {
+						document.body.style.backgroundColor = "white";
                         resolve();
                     }, 2000);
         
@@ -272,7 +266,7 @@ function endScreenHighScore() {
 
     var totalScore = typeGameScore + reactionGameScore + clickBoxGameScore;
 
-    document.getElementById("endBox").value = "You got " + totalScore + "points";
+    document.getElementById("endBox").value = "You got " + totalScore + " points!";
 
 }
 

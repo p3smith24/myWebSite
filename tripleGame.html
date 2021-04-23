@@ -18,7 +18,31 @@
                     <div id="start" style="display: block;">
                         <h1><span>Start & Settings</span></h1>
 
-                        <br>
+                        <br><br>
+						
+						<p><span>Typing Game Settings</span></p>
+						
+						<br>
+						
+						<a><span>How much time do you get per character? :<input id="typeMillisecondsPerCharacter" type="text" value="175" size="50"></span></a> <br><br>
+						<a><span>How long to wait before starting? :<input id="typeWaitBeforeStart" type="text" value="1500" size="50"></span></a> <br><br><br>
+						
+						<p><span>Reaction Game Settings</span></p>
+						
+						<br>
+						
+						<a><span>How long to wait before starting? :<input id="reactionWaitBeforeStart" type="text" value="1500" size="50"></span></a> <br><br><br>
+						
+						<p><span>Match Game Settings</span></p>
+						
+						
+						<br>
+						
+						<a><span>How much time do you have to match? :<input id="clickBoxTimeToClick" type="text" value="2000" size="50"></span></a> <br><br>
+						<a><span>How long to wait before starting? :<input id="clickBoxWaitBeforeStart" type="text" value="1500" size="50"></span></a> <br><br>
+						<a><span>Is the selection randomized? :<input id="clickBoxIsRandom" type="text" value="true" size="50"></span></a> <br><br>
+						<a><span>Is the button preset? :<input id="clickBoxIsWordPreset" type="text" value="false" size="50"></span></a> <br><br>
+						<a><span>Which button is preset? :<input id="clickBoxPresetButtonID" type="text" value="0" size="50"></span></a> <br><br><br><br>
 
                         <a><span><input type="button" onclick="startController()" id="startButton" value="Click to Start"></span><a>
 
@@ -98,10 +122,12 @@
                 <!--end / highscore / reset div--> 
                     <div id="end" style="display: none;">
                         <h1><span>End</span></h1>
+						
+						<br>
 
-                        <input type="text" id="endBox" value="" readonly size="50">
+                        <a><span><input type="text" id="endBox" value="" readonly size="50"></span></a>
 
-                        <br><br>
+                        <br><br><br>
 
                         <a><span><input type="button" onclick="endScreenRestart()" id="startButton" value="Click to Restart"></span></a>
                     </div>
