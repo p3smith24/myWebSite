@@ -29,7 +29,7 @@ function startController() {
 
 }
 
-async function mainController(typeRepetitions, typeMillisecondsPerCharacter, typeWaitBeforeStart, reactionRepetitions, reactionWaitBeforeStart, clickBoxRepetitions, timeToClick, waitBeforeStart) {
+async function mainController(typeRepetitions, typeMillisecondsPerCharacter, typeWaitBeforeStart, reactionRepetitions, reactionWaitBeforeStart, clickBoxRepetitions, timeToClick, clickBoxWaitBeforeStart) {
 
     document.getElementById("start").style.display = "none";
 
@@ -53,13 +53,13 @@ async function mainController(typeRepetitions, typeMillisecondsPerCharacter, typ
 
     document.body.style.backgroundColor = "white";
 
-    document.getElementById("reactionGame").style.display = "none";
+    document.getElementById("reactionGame").style.display = "none"; 
 
     document.getElementById("clickBoxGame").style.display = "block";
 
     for (i = 0; i<2; i++) {
 
-        await clickBox(timeToClick, waitBeforeStart);
+        await clickBox(1500, 1500, false, true, 7);
 
     }
 
@@ -192,37 +192,57 @@ async function reactionGameRun(waitBeforeStart) {
 
 }
 
-async function clickBox(timeToClick, waitBeforeStart) {
+async function clickBox(timeToClick, waitBeforeStart, isRandom, isWordPreset, presetButtonID) {
 
     return new Promise(function (resolve, reject) {
 
-    document.getElementById("buttonToClick").value = "";
+    readyToClick = false;
+    buttonNames = ["Ball", "Cart", "Balloon", "Oink", "Zip", "Zap", "Ogre", "Call", "Cab"];
+    var randomButton;
+    var selectedWord;
 
+    document.getElementById("buttonToClick").value = "";
     document.getElementById("response").value = "";
 
-    buttonNames = ["Ball", "Cart", "Balloon", "Oink", "Zip", "Zap", "Ogre", "Call",];
-    
-    readyToClick = false;
-    
-    var randomButton;
-
-    var randomWord;
-
-    var splicedArray = buttonNames;
 
     setTimeout(function () {
         
-        for(var i = 0; i < buttonID.length; i++){ 
+        if (isRandom == true) {
+            for(var i = 0; i < buttonID.length; i++){ 
 
-            randomButton = Math.floor((Math.random() * (buttonID.length - i)));
+                randomButton = Math.floor((Math.random() * (buttonID.length - i)));
+            
+                document.getElementById(buttonID[i]).value = buttonNames[randomButton];
         
-            document.getElementById(buttonID[i]).value = splicedArray[randomButton];
-    
+            }
+        }
+        else if (isRandom == false) {
+            for(var i = 0; i < buttonID.length; i++){ 
+            
+                document.getElementById(buttonID[i]).value = buttonNames[i];
+        
+            }
+        }
+        else {
+            document.getElementById("response").value = "isRandom Parameter Error";
+            resolve();
         }
 
-        randomWord = Math.floor((Math.random() * 9));
+// =====================================
 
-        document.getElementById("buttonToClick").value = document.getElementById(buttonID[randomWord]).value;
+        if (isWordPreset == true) {
+            document.getElementById("buttonToClick").value = document.getElementById(buttonID[presetButtonID]).value;
+        }
+        else if (isWordPreset == false) {
+            selectedWord = Math.floor((Math.random() * 9));
+
+            document.getElementById("buttonToClick").value = document.getElementById(buttonID[selectedWord]).value;
+        }
+        else {
+            document.getElementById("response").value = "isWordPreset Parameter Error";
+        }
+
+// =====================================
 
         readyToClick = true;
 
@@ -250,7 +270,15 @@ async function clickBox(timeToClick, waitBeforeStart) {
 
 function endScreenHighScore() {
 
-    document.getElementById("endBox").value = "You got " + typeGameScore + reactionGameScore + clickBoxGameScore + "points";
+    var totalScore = typeGameScore + reactionGameScore + clickBoxGameScore;
+
+    document.getElementById("endBox").value = "You got " + totalScore + "points";
+
+}
+
+function endScreenRestart() {
+
+    location.reload();
 
 }
 
