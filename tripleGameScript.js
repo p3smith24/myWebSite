@@ -16,6 +16,15 @@ var timeInMilliseconds;
 
 function startController() {
 	
+	var typeMPC = document.getElementById("typeMillisecondsPerCharacter").value;
+	var typeWBS = document.getElementById("typeWaitBeforeStart").value;
+	var reactionWBS = document.getElementById("reactionWaitBeforeStart").value;
+	var clickBoxTTC = document.getElementById("clickBoxTimeToClick").value;
+	var clickBoxWBS = document.getElementById("clickBoxWaitBeforeStart").value;
+	var clickBoxIR = document.getElementById("clickBoxIsRandom").value;
+	var clickBoxIWP = document.getElementById("clickBoxIsWordPreset").value;
+	var clickBoxPBI = document.getElementById("clickBoxPresetButtonID").value;
+	
 
 
     mainController(typeMPC, typeWBS, reactionWBS, clickBoxTTC, clickBoxWBS, clickBoxIR, clickBoxIWP, clickBoxPBI);

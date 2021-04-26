@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <script language="JavaScript">
+			
+			
+			var myStorage = window.localStorage;
+			
+			function inputData() {
+				sessionStorage.setItem("data", document.getElementById("input").value);
+			}
+			
+			function outputData() {
+				document.getElementById("output") = sessionStorage.getItem("data");
+			}
+			
+            </script>
+        </head>
+        <body>
+            <center>
+
+            <h1>JS LocalStorage Test</h1>
+			
+			<br>
+			
+			<input id="input" type="text" size="75">
+			
+			<br><br>
+
+            <input type="button" value="Input Data" onClick="inputData()">
+			
+			<br><br>
+			
+			<input id="output" type="text" size="75">
+			
+			<br><br>
+
+            <input type="button" value="Output Data" onClick="outputData()">
+
+            <br>
+
+            
+
+        <body>
+    </html>
