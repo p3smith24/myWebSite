@@ -1,0 +1,75 @@
+<html> 
+<head> 
+<script language="JavaScript">
+
+
+// Two dimen
+var songs =[
+			   ["Springsteen", "Land of Hope and Dreams"],
+			   ["Beatles", "Let it Be"],
+			   ["The Who", "Baba O'Reilly"],
+			   ["Rolling Stones", "Start Me Up"]  
+			];
+				   
+		
+var songNum = -1;
+var score = 0
+
+function nextSong()
+{
+	songNum++
+	if( songNum == songs.length)
+	{
+		songNum = 0;
+	}
+	
+	document.getElementById("artist").value = songs[songNum][0];
+	document.getElementById("song").value = songs[songNum][1];
+}
+
+function add()
+{
+	//alert("add");
+	var art = prompt("Who is the artist?");
+    var title = prompt("What is the song title??");
+    
+    var temp = [art, title]
+
+    songs.push(temp);
+}
+
+function remove()
+{
+	alert("Remove");
+}
+
+function getSong(s)
+{
+	alert(helper);
+}
+
+
+
+</script>
+</head>
+<body > 
+<center>
+<h1> My Quiz</h1>
+Click here to return to my home page.
+
+<br/><br/>
+
+<input type="button" value = "Next song" onclick="nextSong()"/>
+<br/><br/>
+<input type="text" id="artist" size="50">  <input type="text" id="song" size="50">
+<br/><br/>
+<input type="button" value = "Add a song" onclick="add()"/>
+<input type="button" value = "Remove a song" onclick="remove()"/>
+
+<br/><br/>
+
+</center>
+
+
+</body>
+</html>
